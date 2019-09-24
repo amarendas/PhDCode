@@ -1,0 +1,21 @@
+This is a message from the MailScanner E-Mail Virus Protection Service
+----------------------------------------------------------------------
+The original e-mail attachment "dataInv.mat"
+is on the list of unacceptable attachments for this site and has been
+replaced by this warning message.
+
+If you wish to receive a copy of the original attachment, please
+e-mail helpdesk and include the whole of this message
+in your request. Alternatively, you can call them, with
+the contents of this message to hand when you call.
+
+At Mon Sep 23 18:18:25 2019 the virus scanner said:
+   MailScanner: Microsoft Access Shortcuts are dangerous in email (dataInv.mat)
+
+Note to Help Desk: Look on The BARC (magnum.barc.gov.in) MailScanner in /var/spool/MailScanner/quarantine/20190923 (message x8NCmMmI028157).
+-- 
+Postmaster
+Bhabha Atomic Research Centre
+www.barc.gov.in
+
+

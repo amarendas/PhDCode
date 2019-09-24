@@ -2,7 +2,7 @@
 clear all
 close all
 clc
-ga=9.81;% Accleration due to gravity
+ga=0;% Accleration due to gravity
 slope=30*3.14/180;
 l=.210;% Span of the vehicle
 r=.05; % Wheel radius
@@ -141,17 +141,17 @@ disp('Inverse Dynamics completed')
 
 %%
 %%%calculating the forward dynamics
-% q0=[0 0 0 0]';% initial condition
-% disp('Forward Dynamics Started');
-% options = odeset('RelTol',1e-06, 'AbsTol',1e-12);
-% [FD_Time,FD_q]=ode45(@(ti,y) FD(ti,y,t,tau),t,q0,options);
-% w_fd=Tp(1,:)*FD_q(:,3:4)';
-% disp('Forward dynamics complete')
-% figure 
-% plot(FD_Time,FD_q(:,1),FD_Time,FD_q(:,2)); grid; 
-% title('Wheel rol angle using Fwd dyn'),xlabel('time(sec)'),ylabel('rad');
-% figure
-% plot(FD_Time,-FD_q(:,1)+theta1, FD_Time,-FD_q(:,2)+theta2);grid
-% title('Error in angle with FD and Inv Dyn ');xlabel('time(sec)');ylabel('rad');
-% 
-% disp(' End of run')
+q0=[0 0 0 0]';% initial condition
+disp('Forward Dynamics Started');
+options = odeset('RelTol',1e-06, 'AbsTol',1e-12);
+[FD_Time,FD_q]=ode45(@(ti,y) FD(ti,y,t,tau),t,q0,options);
+w_fd=Tp(1,:)*FD_q(:,3:4)';
+disp('Forward dynamics complete')
+figure 
+plot(FD_Time,FD_q(:,1),FD_Time,FD_q(:,2)); grid; 
+title('Wheel rol angle using Fwd dyn'),xlabel('time(sec)'),ylabel('rad');
+figure
+plot(FD_Time,-FD_q(:,1)+theta1, FD_Time,-FD_q(:,2)+theta2);grid
+title('Error in angle with FD and Inv Dyn ');xlabel('time(sec)');ylabel('rad');
+
+disp(' End of run')
