@@ -8,7 +8,7 @@ max=max(size(t));
 OneV=ones(1,601)
 b=beta(t);
 R=5;
-mu=.1;
+mu=.3;
 mass=70
 x=R.*cos(b);
 y=R.*sin(b);
@@ -36,8 +36,10 @@ nR=sqrt(4.893^2+4.083^2)
 x2=(nR).*cos(b);
 y2=(nR).*sin(b);
 figure;
-plot(x,y,x1(1:450),y1(1:450),x2,y2,'-.');axis square;legend('Given Path','Path Traced');
-grid; title('Path traced by RARS (\mu=0.1) '), xlabel('x (m)'),ylabel('y (m)');
+plot(x,y,x1(1:499),y1(1:499),'+');
+%plot(x,y,x1(1:450),y1(1:450),x2,y2,'-');
+axis square;legend('Given Path','Path Traced');
+grid; title('Path traced by RARS (\mu=0.3) '), xlabel('x (m)'),ylabel('y (m)');
 
 figure;
 plot(t,F_fri,'-r',t, F_cent,'-.g',t,FNet,'-b');grid;
